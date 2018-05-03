@@ -102,8 +102,8 @@ for link in links:
     url = link['href']
     if '.csv' in url:
         title = link.contents[0].replace('(CSV)', '').strip().replace(' 5', '')
-        csvYr = title.split(' ')[-1]
-        csvMth = title.split(' ')[-2][:3]
+        csvYr = title.split()[-1]
+        csvMth = title.split()[-2][:3]
         if '-' in csvMth:
             csvMth = csvYr[:3]
             csvYr = '2015'
